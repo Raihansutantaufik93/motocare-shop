@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoCare Shop - Detail Produk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Header & Navigasi -->
+    <header class="raihan_header">
+        <div class="raihan_logo">MotoCare Shop</div>
+        <nav class="raihan_nav">
+            <a href="index.html">Beranda</a>
+            <a href="catalog.html">Katalog</a>
+            <a href="detail.html" class="raihan_aktif">Detail</a>
+            <a href="about.html">Tentang</a>
+            <a href="cart.html">Keranjang</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+    </header>
+
+    <main class="raihan_detail_container" style="max-width: 950px; margin: 40px auto; padding: 0 20px;">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="color: #38bdf8; font-size: 28px; margin-bottom: 5px;">Detail Produk</h2>
+            <p style="color: #94a3b8; font-size: 14px;">Informasi lengkap mengenai spesifikasi dan kegunaan produk.</p>
+        </div>
+
+        <div class="raihan_detail_box" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; background: #1e293b; padding: 35px; border-radius: 12px; border: 1px solid #334155; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+            <!-- Kolom Gambar Produk -->
+            <div class="raihan_detail_img_box" style="display: flex; justify-content: center; align-items: center; background: #0f172a; border-radius: 8px; padding: 20px; border: 1px solid #334155;">
+                <img id="detail-img" src="" alt="Foto Produk" style="max-width: 100%; max-height: 300px; object-fit: contain; border-radius: 8px;">
+            </div>
+
+            <!-- Kolom Informasi Produk -->
+            <div class="raihan_detail_info">
+                <h3 id="detail-title" style="color: #38bdf8; font-size: 24px; margin-bottom: 10px;">Nama Produk</h3>
+                <h4 id="detail-price" style="color: #ffffff; font-size: 20px; margin-bottom: 15px; font-weight: 600;">Rp 0</h4>
+                <p id="detail-desc" style="color: #cbd5e1; font-size: 14px; margin-bottom: 20px; line-height: 1.6;">Deskripsi produk akan muncul di sini.</p>
+                
+                <h4 style="color: #38bdf8; font-size: 16px; margin-bottom: 8px;">Spesifikasi:</h4>
+                <ul id="detail-specs" class="raihan_detail_specs" style="color: #94a3b8; font-size: 14px; padding-left: 20px; margin-bottom: 25px; line-height: 1.6;">
+
+                </ul>
+
+                <a href="#" onclick="tambahKeKeranjang()" class="raihan_btn" style="text-align: center; display: inline-block;">Masukkan Keranjang</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="raihan_footer">
+        <p>&copy; 2026 MotoCare Shop | NIM: 2503010093 - Raihan Sutan Taufik</p>
+    </footer>
+
+    <script>
+        const produkData = {
+            "oli": {
+                nama: "Oli Mesin Motul",
+                harga: "Rp 90.000",
+                gambar: "oli.jpg",
+                deskripsi: "Oli mesin sintetis berkualitas tinggi yang diformulasikan khusus untuk memberikan perlindungan maksimal pada mesin motor Anda, menjaga suhu tetap stabil, dan membuat tarikan lebih enteng.",
+                spesifikasi: [
+                    "Kategori: Oli Mesin Motor",
+                    "Kapasitas: 1 Liter",
+                    "Viskositas: 10W-30",
+                    "Standarisasi: JASO MB / MA"
+                ]
+            },
+            "coolant": {
+                nama: "Coolant Radiator",
+                harga: "Rp 40.000",
+                gambar: "coolant.jpg",
+                deskripsi: "Cairan pendingin radiator berkualitas tinggi untuk mencegah mesin *overheat* dan melindungi komponen radiator dari karat serta korosi.",
+                spesifikasi: [
+                    "Kategori: Pendingin Mesin",
+                    "Kapasitas: 1 Liter",
+                    "Fungsi: Anti-Rust & Anti-Boil",
+                    "Kompatibilitas: Semua jenis motor matic radiator"
+                ]
+            },
+            "helm": {
+                nama: "Helm RSV sv300",
+                harga: "Rp 600.000",
+                gambar: "helm.jpg",
+                deskripsi: "Helm half-face / full-face premium berstandar keselamatan tinggi dengan desain aerodinamis yang nyaman digunakan untuk berkendara harian maupun touring.",
+                spesifikasi: [
+                    "Kategori: Perlengkapan Berkendara (Riding Gear)",
+                    "Standar Nasional: SNI & DOT Approved",
+                    "Visor: Dual Visor System (Anti Silau)",
+                    "Busa: Dapat dilepas dan dicuci (Removable Padding)"
+                ]
+            },
+            "kampas": {
+                nama: "Kampas rem belakang RCB",
+                harga: "Rp 85.000",
+                gambar: "kampas.jpg",
+                deskripsi: "Kampas rem racing berkualitas tinggi dari RCB yang memberikan daya cengkeram rem lebih optimal, pakem, dan tahan lama dalam berbagai kondisi jalan.",
+                spesifikasi: [
+                    "Kategori: Suku Cadang Pengereman",
+                    "Merk: RCB (Racing Boy)",
+                    "Posisi: Belakang",
+                    "Keunggulan: Tahan panas dan lebih pakem"
+                ]
+            },
+            "busi": {
+                nama: "Busi Iridium",
+                harga: "Rp 95.000",
+                gambar: "busi.jpg",
+                deskripsi: "Busi dengan teknologi material Iridium pada ujung elektrodenya menghasilkan pembakaran yang jauh lebih sempurna, akselerasi responsif, dan hemat bahan bakar.",
+                spesifikasi: [
+                    "Kategori: Pengapian Mesin",
+                    "Material: Tip Iridium",
+                    "Keunggulan: Umur pakai lebih panjang & stabil",
+                    "Kompatibilitas: Universal motor matic & bebek"
+                ]
+            },
+            "sarung": {
+                nama: "Sarung Tangan Touring",
+                harga: "Rp 75.000",
+                gambar: "sarungtangan.jpg",
+                deskripsi: "Sarung tangan pelindung berkendara dengan pelindung buku jari (knuckle protector) yang kuat, nyaman, dan adem dipakai saat perjalanan jauh.",
+                spesifikasi: [
+                    "Kategori: Riding Gear",
+                    "Fitur: Hard Knuckle Protection",
+                    "Material: Kulit sintetis & mesh breathable",
+                    "Kondisi: Anti-slip dan nyaman di genggaman"
+                ]
+            }
+        };
+
+        // Fungsi untuk menyimpan produk ke keranjang saat tombol diklik
+        function tambahKeKeranjang() {
+            const produkDipilih = {
+                nama: document.getElementById('detail-title').innerText,
+                harga: document.getElementById('detail-price').innerText,
+                jumlah: 1
+            };
+            localStorage.setItem('keranjangMotoCare', JSON.stringify(produkDipilih));
+            window.location.href = 'cart.html';
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const jenisProduk = urlParams.get('produk') || 'oli';
+
+        if (produkData[jenisProduk]) {
+            const data = produkData[jenisProduk];
+            document.getElementById('detail-title').innerText = data.nama;
+            document.getElementById('detail-price').innerText = data.harga;
+            document.getElementById('detail-desc').innerText = data.deskripsi;
+            document.getElementById('detail-img').src = data.gambar;
+            document.getElementById('detail-img').alt = data.nama;
+
+            const listSpec = document.getElementById('detail-specs');
+            listSpec.innerHTML = '';
+            data.spesifikasi.forEach(spec => {
+                const li = document.createElement('li');
+                li.innerText = spec;
+                listSpec.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

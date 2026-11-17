@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoCare Shop - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header class="raihan_header">
+        <div class="raihan_logo">MotoCare Shop</div>
+        <nav class="raihan_nav">
+            <a href="index.html">Beranda</a>
+            <a href="catalog.html">Katalog</a>
+            <a href="detail.html">Detail</a>
+            <a href="about.html">Tentang</a>
+            <a href="cart.html">Keranjang</a>
+            <a href="checkout.html" class="raihan_aktif">Checkout</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- Konten Checkout -->
+    <section class="raihan_catalog_section" style="padding-top: 40px; max-width: 700px; margin: 0 auto; text-align: left;">
+        <h2 style="text-align: center;">Formulir Checkout Pesanan</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Silakan lengkapi data pengiriman Anda di bawah ini.</p>
+
+        <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <form action="#" method="POST">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; font-weight: bold; color: #1e293b; margin-bottom: 8px;">Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama lengkap Anda" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;" required>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; font-weight: bold; color: #1e293b; margin-bottom: 8px;">Nomor Telepon / WhatsApp</label>
+                    <input type="text" placeholder="Contoh: 087749366700" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;" required>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; font-weight: bold; color: #1e293b; margin-bottom: 8px;">Alamat Pengiriman Lengkap</label>
+                    <textarea rows="4" placeholder="Masukkan alamat tujuan pengiriman..." style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px;" required></textarea>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; font-size: 14px; font-weight: bold; color: #1e293b; margin-bottom: 8px;">Metode Pembayaran</label>
+                    <select style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; background: white;">
+                        <option>Transfer Bank (BCA / Mandiri)</option>
+                        <option>E-Wallet (GoPay / OVO / Dana)</option>
+                        <option>Bayar di Tempat (COD)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="raihan_btn" style="width: 100%; padding: 12px; font-size: 15px; cursor: pointer;">Konfirmasi Pesanan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="raihan_footer">
+        <p>&copy; 2026 MotoCare Shop | NIM: 2503010093 - Raihan Sutan Taufik</p>
+    </footer>
+
+</body>
+</html>

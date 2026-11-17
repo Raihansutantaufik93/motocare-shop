@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.raihan_header {
+    background-color: #1e293b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.raihan_logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.raihan_nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.raihan_nav a:hover, .raihan_nav .raihan_aktif {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.raihan_hero {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.raihan_banner_box {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.raihan_foto_banner {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center 40%;
+    display: block;
+}
+
+.raihan_banner_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.raihan_banner_text h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.raihan_banner_text p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.raihan_btn {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.raihan_btn:hover {
+    background-color: #0369a1;
+}
+
+.raihan_features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.raihan_card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid #0284c7;
+}
+
+.raihan_card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.raihan_card p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.raihan_catalog_section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.raihan_catalog_section h2 {
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.raihan_catalog_section p {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.raihan_product_grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.raihan_product_card {
+    background: white;
+    border-radius: 8px;
+    width: 260px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.raihan_img_box {
+    background-color: #e2e8f0;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.raihan_product_card h3 {
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.raihan_price {
+    color: #0284c7;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.raihan_btn_detail {
+    display: block;
+    text-align: center;
+    background-color: #f1f5f9;
+    color: #0284c7;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.raihan_btn_detail:hover {
+    background-color: #0284c7;
+    color: white;
+}
+
+.raihan_footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    margin-top: 180px;
+}
